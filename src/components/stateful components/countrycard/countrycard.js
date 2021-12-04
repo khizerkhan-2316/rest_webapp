@@ -2,10 +2,10 @@ import "./countrycard.css";
 import "../../../root.css";
 
 const CountryCard = (props) => {
-  const { link, name, population, region, capital } = props;
+  const { flag, name, population, region, capital } = props;
   return (
     <section className="countrycard">
-      <img src={link} alt="Country" />
+      <img src={flag} alt="Country" />
 
       <h4>{name}</h4>
 

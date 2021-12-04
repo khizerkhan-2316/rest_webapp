@@ -1,4 +1,6 @@
-@import url("https://fonts.google.com/specimen/Nunito+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 :root {
   --dark-mode--element: hsl(209, 23%, 22%);
   --dark-mode-background: hsl(207, 26%, 17%);
@@ -7,7 +9,7 @@
   --light-mode-background: hsl(0, 0%, 98%);
   --dark-mode-text: hsl(0, 0%, 100%);
   --light-mode-element: hsl(0, 0%, 100%);
-  --heading-font-family: "Nunito Sans", sans-serif;
+  --heading-font-family: "Playfair Display", serif;
   --text-font-family: "EB Garamond", serif;
 }
 
@@ -47,5 +49,5 @@ h5 {
 }
 
 h6 {
-  font-weight: 300;
+  font-weight: bold;
 }

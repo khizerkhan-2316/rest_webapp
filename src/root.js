@@ -1,0 +1,5 @@
+const formatNumber = (number) => {
+  return new Intl.NumberFormat("dk-DK").format(number);
+};
+
+export default formatNumber;
