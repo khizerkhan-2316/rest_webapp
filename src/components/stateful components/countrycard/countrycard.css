@@ -1,0 +1,36 @@
+.countrycard {
+  width: 17%;
+  height: 240px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  border-radius: 5px;
+}
+
+.lightmode .countrycard {
+  color: var(--light-mode-text);
+  background-color: var(--light-mode-element);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.darkmode .countrycard {
+  color: var(--dark-mode-text);
+  background-color: var(--dark-mode--element);
+}
+
+.countrycard img {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.countrycard h4 {
+  margin-left: 10px;
+}
+
+.countryinformation-container h6 {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+}

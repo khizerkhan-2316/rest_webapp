@@ -6,7 +6,6 @@ nav,
 
 nav {
   width: 100%;
-  border: 1px solid black;
   height: 50px;
   justify-content: center;
   align-items: center;
@@ -25,4 +24,15 @@ nav {
 
 img {
   width: 25px;
+}
+
+.lightmode nav {
+  color: var(--light-mode-text);
+  background-color: var(--light-mode-element);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.darkmode nav {
+  color: var(--dark-mode-text);
+  background-color: var(--dark-mode--element);
 }

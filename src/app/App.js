@@ -1,10 +1,54 @@
 import "./App.css";
-import NavigationBar from "../components/navigationbar.js";
+import NavigationBar from "../components/stateful components/navigation/navigationbar.js";
+import CountryCard from "../components/stateful components/countrycard/countrycard.js";
 
 function App() {
   return (
     <>
       <NavigationBar />
+      <section className="main-container">
+        <section className="countrycard-container">
+          <CountryCard
+            link={
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAflBMVEUAAAD/3gDtHCRNTU3+6E3/6QD/2wDUGSD5HSXsEyX/4wDuFiQzMzP5FR/1GCHyYWb+5DPxSk+Dg4NGRkZwcHA+Pj4iIiI9TEsdMjHhX2TeERvbFR3cR0z7YWj7S1LxW2jwRFL+7E3/7wD+6DP+5j7/9gD+4SL+74P+7kb+63ARqumxAAABvElEQVR4nO3SWVITUABE0ccQkEggDAKCoozC/jdIygW8+5l8nLOCrls9Lq8OmLi6Hj8GUzfjYNsTdt2pREWiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEqn43bbE3bd3fh5f8zEw6/xe/WNidXjOF/tM3F2IVGQKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSpU2iP6sTJs7+bl70nYnNiw4XR0ws1+PpecnE88vmRXtMLNYSBYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmi9D/R0bZX7LTlery+LZh4ex//Pg6Z+Pj8Al87FVDT2YHCAAAAAElFTkSuQmCC"
+            }
+            name={"Gemerny"}
+            population={2000}
+            region={"Europe"}
+            capital={"Berlin"}
+          />
+
+          <CountryCard
+            link={
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAflBMVEUAAAD/3gDtHCRNTU3+6E3/6QD/2wDUGSD5HSXsEyX/4wDuFiQzMzP5FR/1GCHyYWb+5DPxSk+Dg4NGRkZwcHA+Pj4iIiI9TEsdMjHhX2TeERvbFR3cR0z7YWj7S1LxW2jwRFL+7E3/7wD+6DP+5j7/9gD+4SL+74P+7kb+63ARqumxAAABvElEQVR4nO3SWVITUABE0ccQkEggDAKCoozC/jdIygW8+5l8nLOCrls9Lq8OmLi6Hj8GUzfjYNsTdt2pREWiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEqn43bbE3bd3fh5f8zEw6/xe/WNidXjOF/tM3F2IVGQKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSpU2iP6sTJs7+bl70nYnNiw4XR0ws1+PpecnE88vmRXtMLNYSBYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmi9D/R0bZX7LTlery+LZh4ex//Pg6Z+Pj8Al87FVDT2YHCAAAAAElFTkSuQmCC"
+            }
+            name={"Gemerny"}
+            population={2000}
+            region={"Europe"}
+            capital={"Berlin"}
+          />
+
+          <CountryCard
+            link={
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAflBMVEUAAAD/3gDtHCRNTU3+6E3/6QD/2wDUGSD5HSXsEyX/4wDuFiQzMzP5FR/1GCHyYWb+5DPxSk+Dg4NGRkZwcHA+Pj4iIiI9TEsdMjHhX2TeERvbFR3cR0z7YWj7S1LxW2jwRFL+7E3/7wD+6DP+5j7/9gD+4SL+74P+7kb+63ARqumxAAABvElEQVR4nO3SWVITUABE0ccQkEggDAKCoozC/jdIygW8+5l8nLOCrls9Lq8OmLi6Hj8GUzfjYNsTdt2pREWiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEqn43bbE3bd3fh5f8zEw6/xe/WNidXjOF/tM3F2IVGQKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSpU2iP6sTJs7+bl70nYnNiw4XR0ws1+PpecnE88vmRXtMLNYSBYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmi9D/R0bZX7LTlery+LZh4ex//Pg6Z+Pj8Al87FVDT2YHCAAAAAElFTkSuQmCC"
+            }
+            name={"Gemerny"}
+            population={2000}
+            region={"Europe"}
+            capital={"Berlin"}
+          />
+
+          <CountryCard
+            link={
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAflBMVEUAAAD/3gDtHCRNTU3+6E3/6QD/2wDUGSD5HSXsEyX/4wDuFiQzMzP5FR/1GCHyYWb+5DPxSk+Dg4NGRkZwcHA+Pj4iIiI9TEsdMjHhX2TeERvbFR3cR0z7YWj7S1LxW2jwRFL+7E3/7wD+6DP+5j7/9gD+4SL+74P+7kb+63ARqumxAAABvElEQVR4nO3SWVITUABE0ccQkEggDAKCoozC/jdIygW8+5l8nLOCrls9Lq8OmLi6Hj8GUzfjYNsTdt2pREWiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEqn43bbE3bd3fh5f8zEw6/xe/WNidXjOF/tM3F2IVGQKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSpU2iP6sTJs7+bl70nYnNiw4XR0ws1+PpecnE88vmRXtMLNYSBYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmi9D/R0bZX7LTlery+LZh4ex//Pg6Z+Pj8Al87FVDT2YHCAAAAAElFTkSuQmCC"
+            }
+            name={"Gemerny"}
+            population={2000}
+            region={"Europe"}
+            capital={"Berlin"}
+          />
+        </section>
+      </section>
     </>
   );
 }
