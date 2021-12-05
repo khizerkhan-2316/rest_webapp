@@ -1,42 +1,76 @@
 .countrycard {
   width: 200px;
-  height: 300px;
+  height: 320px;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: space-between;
-  border-radius: 5px;
+  border-radius:10px;
   margin: 20px 0px 20px 0px;
+
 }
 
 .lightmode .countrycard {
   color: var(--light-mode-text);
   background-color: var(--light-mode-element);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border: 1px solid var(--light-mode-back);
+box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  cursor: pointer;
+
+  
+}
+
+.lightmode .countrycard:hover{
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   transition: .3s;
+
+
 }
 
 .darkmode .countrycard {
   color: var(--dark-mode-text);
   background-color: var(--dark-mode--element);
+  box-shadow:
+		0px 1px 1px 0px hsla(0,0%,0%,0.14), 
+		0px 2px 1px -1px hsla(0,0%,0%,0.12), 
+		0px 1px 3px 0px hsla(0,0%,0%,0.2);
+    cursor: pointer;
+
+
+}
+
+.darkmode .countrycard:hover{
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+ 
 }
 
 .countrycard img {
   width: 100%;
-  height: 160px;
+  height: 150px;
   object-fit: cover;
   image-rendering: high-quality;
   margin-bottom: 20px;
 }
 
 .countrycard h4 {
-  margin-left: 10px;
+  margin-left: 20px;
+  font-size: 20px;
 }
+
 
 .countryinformation-container h6 {
   width: 100%;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.countryinformation-container h6 span {
+  font-size: 15px;
 }
 
 span {
@@ -44,36 +78,26 @@ span {
   font-weight: 500;
 }
 
-@media screen and (min-width: 1440px ){
-  .countrycard{
+@media screen and (min-width: 1440px) {
+  .countrycard {
     width: 21%;
   }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1439px){
-  .countrycard{
+@media screen and (min-width: 900px) and (max-width: 1439px) {
+  .countrycard {
     width: 30%;
   }
 }
 
-
-@media screen and (min-width: 550px) and (max-width:899px){
-  
-
-  .countrycard{
+@media screen and (min-width: 550px) and (max-width: 899px) {
+  .countrycard {
     width: 45%;
   }
 }
 
-
 @media screen and (max-width: 549px) {
-
-  .countrycard{
+  .countrycard {
     width: 100%;
   }
-
-
-  
-
-
 }
