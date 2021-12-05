@@ -16,3 +16,15 @@
   margin-top: 30px;
   height: auto;
 }
+
+
+
+@media screen and (max-width: 466px) {
+
+ .countrycard-container{
+   justify-content: center;
+ }
+  
+
+
+}
