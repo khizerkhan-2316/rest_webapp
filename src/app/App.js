@@ -34,6 +34,9 @@ function App() {
     <>
       <NavigationBar />
       <section className="main-container">
+      <section className="searchbar-and-filter-container"> 
+      
+      </section>
         <section className="countrycard-container">{countries}</section>
       </section>
     </>
