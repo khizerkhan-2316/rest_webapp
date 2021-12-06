@@ -1,0 +1,47 @@
+.searchbar-container {
+  width: 40%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-container input {
+  width: 90%;
+  padding: 15px 20px 15px 20px;
+  border: none;
+  outline: none;
+  font-family: var(--text-font-family);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.searchbar-container img {
+  width: 29px;
+  padding-left: 15px;
+}
+
+.lightmode .searchbar-container {
+  color: var(--light-mode-text);
+  background-color: var(--light-mode-element);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
+
+.lightmode .searchbar-container:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.3s;
+}
+
+.darkmode .searchbar-container {
+  color: var(--dark-mode-text);
+  background-color: var(--dark-mode--element);
+  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
+  cursor: pointer;
+}
+
+.darkmode .searchbar-container:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}

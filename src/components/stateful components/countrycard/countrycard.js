@@ -1,5 +1,5 @@
-import "./countrycard.css";
 import "../../../root.css";
+import "./countrycard.css";
 
 const CountryCard = (props) => {
   const { flag, name, population, region, capital } = props;

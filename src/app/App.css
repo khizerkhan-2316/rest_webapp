@@ -17,16 +17,14 @@
   height: auto;
 }
 
-
-
-
+.search_and_filter_container {
+  width: 90%;
+  height: auto;
+  margin-top: 40px;
+}
 
 @media screen and (max-width: 466px) {
-
- .countrycard-container{
-   justify-content: center;
- }
-  
-
-
+  .countrycard-container {
+    justify-content: center;
+  }
 }
