@@ -4,7 +4,6 @@ import searchbarIcon from "../../../assets/images/searchbar.png";
 import { useState } from "react";
 
 const Searchbar = (props) => {
-  const [input, setInput] = useState("");
   return (
     <section className="searchbar-container">
       <img src={searchbarIcon} alt="Search" />
@@ -12,10 +11,11 @@ const Searchbar = (props) => {
         type="text"
         className="input_field"
         placeholder="Search for a country..."
-        onChange={(event) => setInput(event.target.value)}
+        onChange={(event) => {
+          props.onChange(event.target.value);
+          props.filterCountries(props.countries, event.target.value);
+        }}
       />
-
-      {input}
     </section>
   );
 };
