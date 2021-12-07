@@ -1,12 +1,15 @@
 import "../../../root.css";
 import "./searchbar.css";
 import searchbarIcon from "../../../assets/images/searchbar.png";
-import { useState } from "react";
+import searchbarDarkModeIcon from "../../../assets/images/searchbar_darkmode.png";
 
 const Searchbar = (props) => {
   return (
     <section className="searchbar-container">
-      <img src={searchbarIcon} alt="Search" />
+      <img
+        src={props.isdark ? searchbarDarkModeIcon : searchbarIcon}
+        alt="Search"
+      />
       <input
         type="text"
         className="input_field"

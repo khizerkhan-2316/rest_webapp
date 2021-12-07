@@ -1,0 +1,96 @@
+.dropdown {
+  width: 300px;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: space-between;
+}
+
+.dropdown-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 300px;
+  max-height: 180px;
+  margin-left: -20px;
+  margin-top: 45px;
+  z-index: 1;
+  border-radius: 10px;
+  justify-content: flex-start;
+  background-color: var(--dark-mode--element);
+}
+
+.dropdown-content option {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 0px 10px 20px;
+}
+
+.lightmode .dropdown-content option:hover {
+  background-color: var(--light-mode-element);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
+
+.darkmode .dropdown-content option:hover {
+  color: var(--dark-mode-text);
+  background-color: var(--dark-mode--element);
+  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
+  cursor: pointer;
+}
+
+.show {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+
+.hide {
+  display: none;
+}
+
+.lightmode .dropdown-content {
+  color: var(--light-mode-text);
+  background-color: var(--light-mode-element);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
+
+.lightmode .dropdown-content:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.3s;
+}
+
+.lightmode .dropdown {
+  color: var(--light-mode-text);
+  background-color: var(--light-mode-element);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
+
+.lightmode .dropdown:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.3s;
+}
+
+.darkmode .dropdown {
+  color: var(--dark-mode-text);
+  background-color: var(--dark-mode--element);
+  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
+  cursor: pointer;
+}
+
+.darkmode .dropdown:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
