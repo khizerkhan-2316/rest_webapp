@@ -13,7 +13,6 @@ function App() {
   const [searchInput, setInput] = useState("");
   const [isdark, setIsdark] = useState(false);
   const [region, setRegion] = useState("");
-  console.log(region);
   useEffect(() => {
     displayAllCountries();
   }, []);
@@ -23,6 +22,14 @@ function App() {
       country.name.toLowerCase().includes(countryName.toLowerCase())
     );
     setFilteredCountries(filteredCountries);
+  };
+
+  const displayByRegion = (countries, region) => {
+    const countryByRegion = countries.filter((country) =>
+      country.region.toLowerCase().includes(region.toLowerCase())
+    );
+
+    setFilteredCountries(countryByRegion);
   };
 
   const displayAllCountries = async () => {
@@ -44,7 +51,13 @@ function App() {
             isdark={isdark}
           />
 
-          <DropdownList isdark={isdark} onClick={setRegion} />
+          <DropdownList
+            isdark={isdark}
+            onClick={setRegion}
+            filterCountries={displayByRegion}
+            countries={countries}
+            region={region}
+          />
         </div>
         <section className="searchbar-and-filter-container"></section>
         <section className="countrycard-container">

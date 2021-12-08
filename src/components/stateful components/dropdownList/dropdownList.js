@@ -32,31 +32,46 @@ const DropdownList = (props) => {
         >
           <option
             className="dropdown-option"
-            onClick={() => props.onClick("Africa")}
+            onClick={() => {
+              props.onClick("Africa");
+              props.filterCountries(props.countries, "Africa");
+            }}
           >
             Africa
           </option>
           <option
             className="dropdown-option"
-            onClick={() => props.onClick("America")}
+            onClick={() => {
+              props.onClick("America");
+              props.filterCountries(props.countries, "America");
+            }}
           >
             America
           </option>
           <option
             className="dropdown-option"
-            onClick={() => props.onClick("Asia")}
+            onClick={() => {
+              props.onClick("Asia");
+              props.filterCountries(props.countries, "Asia");
+            }}
           >
             Asia
           </option>
           <option
             className="dropdown-option"
-            onClick={() => props.onClick("Europe")}
+            onClick={() => {
+              props.onClick("Europe");
+              props.filterCountries(props.countries, "Europe");
+            }}
           >
             Europe
           </option>
           <option
             className="dropdown-option"
-            onClick={() => props.onClick("Oceania")}
+            onClick={() => {
+              props.onClick("Oceania");
+              props.filterCountries(props.countries, "Oceania");
+            }}
           >
             Oceania
           </option>
