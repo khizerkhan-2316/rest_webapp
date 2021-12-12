@@ -8,4 +8,4 @@ const CountryDetails = (props) => {
   );
 };
 
-export { CountryDetails };
+export default CountryDetails;

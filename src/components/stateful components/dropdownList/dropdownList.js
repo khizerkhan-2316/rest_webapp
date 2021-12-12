@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 const DropdownList = (props) => {
   const [isListActive, setIsListActive] = useState(false);
+
   const regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
   return (
     <>
@@ -46,55 +47,19 @@ const DropdownList = (props) => {
           }
           id="myDropdown"
         >
-          <FilterOption
-            nameValue={regions[0]}
-            region={props.region}
-            onClick={props.onClick}
-            filterCountries={props.filterCountries}
-            countries={props.countries}
-            isListActive={isListActive}
-            setIsListActive={setIsListActive}
-          />
-
-          <FilterOption
-            nameValue={regions[1]}
-            region={props.region}
-            onClick={props.onClick}
-            filterCountries={props.filterCountries}
-            countries={props.countries}
-            isListActive={isListActive}
-            setIsListActive={setIsListActive}
-          />
-
-          <FilterOption
-            nameValue={regions[2]}
-            region={props.region}
-            onClick={props.onClick}
-            filterCountries={props.filterCountries}
-            countries={props.countries}
-            isListActive={isListActive}
-            setIsListActive={setIsListActive}
-          />
-
-          <FilterOption
-            nameValue={regions[3]}
-            region={props.region}
-            onClick={props.onClick}
-            filterCountries={props.filterCountries}
-            countries={props.countries}
-            isListActive={isListActive}
-            setIsListActive={setIsListActive}
-          />
-
-          <FilterOption
-            nameValue={regions[4]}
-            region={props.region}
-            onClick={props.onClick}
-            filterCountries={props.filterCountries}
-            countries={props.countries}
-            isListActive={isListActive}
-            setIsListActive={setIsListActive}
-          />
+          {regions.map((region) => {
+            return (
+              <FilterOption
+                nameValue={region}
+                region={props.region}
+                onClick={props.onClick}
+                filterCountries={props.filterCountries}
+                countries={props.countries}
+                isListActive={isListActive}
+                setIsListActive={setIsListActive}
+              />
+            );
+          })}
         </section>
       </section>
     </>
