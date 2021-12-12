@@ -7,6 +7,19 @@
   align-items: space-between;
 }
 
+#remove-filter-box {
+  font-family: var(--text-font-family);
+  background-color: var(--light-mode-element);
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  margin-top: -45px;
+  font-size: 13px;
+  margin-left: -20px;
+  cursor: pointer;
+}
+
 .dropdown-list {
   width: 100%;
   display: flex;
@@ -33,22 +46,54 @@
   padding: 6px 0px 6px 20px;
   font-family: var(--text-font-family);
   font-size: 17px;
+  cursor: pointer;
 }
 
 .lightmode .dropdown-content div:hover {
   background-color: var(--light-mode-element);
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  cursor: pointer;
+  box-shadow: var(--light-mode-boxshadowhover);
   transition: 0.3s;
 }
 
 .darkmode .dropdown-content div:hover {
-  color: var(--dark-mode-text);
   background-color: var(--dark-mode--element);
-  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
-    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
-  cursor: pointer;
-  transition: 0.2s;
+  box-shadow: var(--dark-mode-boxshadowhover);
+  transition: 0.3s;
+}
+
+.lightmode .dropdown-content {
+  background-color: var(--light-mode-element);
+  box-shadow: var(--light-mode-boxshadow);
+}
+
+.lightmode .dropdown-content:hover {
+  box-shadow: var(--light-mode-boxshadowhover);
+  transition: 0.3s;
+}
+
+.lightmode .dropdown,
+.lightmode #remove-filter-box {
+  background-color: var(--light-mode-element);
+  box-shadow: var(--light-mode-boxshadow);
+}
+
+.lightmode .dropdown:hover,
+.lightmode #remove-filter-box:hover {
+  box-shadow: var(--light-mode-boxshadowhover);
+  transition: 0.3s;
+}
+
+.darkmode .dropdown,
+.darkmode #remove-filter-box {
+  background-color: var(--dark-mode--element);
+  color: var(--dark-mode-text);
+  box-shadow: var(--dark-mode-boxshadow);
+}
+
+.darkmode .dropdown:hover,
+.darkmode #remove-filter-box:hover {
+  box-shadow: var(--dark-mode-boxshadowhover);
+  transition: 0.3s;
 }
 
 .show {
@@ -59,44 +104,6 @@
 
 .hide {
   display: none;
-}
-
-.lightmode .dropdown-content {
-  color: var(--light-mode-text);
-  background-color: var(--light-mode-element);
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  cursor: pointer;
-}
-
-.lightmode .dropdown-content:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  transition: 0.3s;
-}
-
-.lightmode .dropdown {
-  color: var(--light-mode-text);
-  background-color: var(--light-mode-element);
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  cursor: pointer;
-}
-
-.lightmode .dropdown:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  transition: 0.3s;
-}
-
-.darkmode .dropdown {
-  color: var(--dark-mode-text);
-  background-color: var(--dark-mode--element);
-  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
-    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
-  cursor: pointer;
-}
-
-.darkmode .dropdown:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }
 
 @media screen and (min-width: 1440px) {

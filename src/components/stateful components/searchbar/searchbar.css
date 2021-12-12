@@ -12,7 +12,6 @@
   outline: none;
   font-family: var(--text-font-family);
   font-size: 17px;
-  cursor: pointer;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -22,29 +21,23 @@
 }
 
 .lightmode .searchbar-container {
-  color: var(--light-mode-text);
   background-color: var(--light-mode-element);
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  cursor: pointer;
+  box-shadow: var(--light-mode-boxshadow);
 }
 
 .lightmode .searchbar-container:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--light-mode-boxshadowhover);
   transition: 0.3s;
 }
 
 .darkmode .searchbar-container {
-  color: var(--dark-mode-text);
   background-color: var(--dark-mode--element);
-  box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
-    0px 2px 1px -1px hsla(0, 0%, 0%, 0.12), 0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
-  cursor: pointer;
+  box-shadow: var(--dark-mode-boxshadow);
 }
 
 .darkmode .searchbar-container:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--dark-mode-boxshadowhover);
+  transition: 0.3s;
 }
 
 @media screen and (min-width: 1440px) {
@@ -68,8 +61,5 @@
 @media screen and (max-width: 549px) {
   .searchbar-container {
     width: 100%;
-  }
-
-  .searchbar-container input {
   }
 }

@@ -1,14 +1,28 @@
-import "./dropdownList.css";
-import "../../../root.css";
-import dropdownListIcon from "../../../assets/images/dropdown-icon.png";
-import dropdownListDarkmodeIcon from "../../../assets/images/dropdown-darkmode-icon.png";
-import { useState } from "react";
+import './dropdownList.css';
+import '../../../root.css';
+import dropdownListIcon from '../../../assets/images/dropdown-icon.png';
+import dropdownListDarkmodeIcon from '../../../assets/images/dropdown-darkmode-icon.png';
+import { useState } from 'react';
 
 const DropdownList = (props) => {
   const [isListActive, setIsListActive] = useState(false);
   return (
     <>
       <section className="dropdown">
+        <div
+          id={
+            props.region === '' ? 'remove-filter-box hide' : 'remove-filter-box'
+          }
+        >
+          <p
+            onClick={() => {
+              props.onClick('');
+              props.filterCountries(props.countries, '');
+            }}
+          >
+            {props.region !== '' ? 'Remove filter: ' + props.region : ''}
+          </p>
+        </div>
         <section className="dropdown-list">
           <h4>Filter by region</h4>
           <img
@@ -26,15 +40,17 @@ const DropdownList = (props) => {
 
         <section
           className={
-            isListActive ? "dropdown-content show" : "dropdown-content hide"
+            isListActive ? 'dropdown-content show' : 'dropdown-content hide'
           }
           id="myDropdown"
         >
           <div
             className="dropdown-div"
             onClick={() => {
-              props.onClick("Africa");
-              props.filterCountries(props.countries, "Africa");
+              props.onClick('Africa');
+              props.filterCountries(props.countries, 'Africa');
+
+              isListActive ? setIsListActive(false) : setIsListActive(true);
             }}
           >
             <p>Africa</p>
@@ -42,8 +58,10 @@ const DropdownList = (props) => {
           <div
             className="dropdown-div"
             onClick={() => {
-              props.onClick("America");
-              props.filterCountries(props.countries, "America");
+              props.onClick('America');
+              props.filterCountries(props.countries, 'America');
+
+              isListActive ? setIsListActive(false) : setIsListActive(true);
             }}
           >
             America
@@ -51,8 +69,10 @@ const DropdownList = (props) => {
           <div
             className="dropdown-div"
             onClick={() => {
-              props.onClick("Asia");
-              props.filterCountries(props.countries, "Asia");
+              props.onClick('Asia');
+              props.filterCountries(props.countries, 'Asia');
+
+              isListActive ? setIsListActive(false) : setIsListActive(true);
             }}
           >
             Asia
@@ -60,8 +80,10 @@ const DropdownList = (props) => {
           <div
             className="dropdown-div"
             onClick={() => {
-              props.onClick("Europe");
-              props.filterCountries(props.countries, "Europe");
+              props.onClick('Europe');
+              props.filterCountries(props.countries, 'Europe');
+
+              isListActive ? setIsListActive(false) : setIsListActive(true);
             }}
           >
             Europe
@@ -69,8 +91,10 @@ const DropdownList = (props) => {
           <div
             className="dropdown-div"
             onClick={() => {
-              props.onClick("Oceania");
-              props.filterCountries(props.countries, "Oceania");
+              props.onClick('Oceania');
+              props.filterCountries(props.countries, 'Oceania');
+
+              isListActive ? setIsListActive(false) : setIsListActive(true);
             }}
           >
             Oceania
