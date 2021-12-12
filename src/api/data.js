@@ -1,6 +1,6 @@
-const axios = require("axios");
+const axios = require('axios');
 
-const countryData = async (url) => {
+const getRequest = async (url) => {
   try {
     const { data: response } = await axios.get(url);
     return response;
@@ -9,4 +9,4 @@ const countryData = async (url) => {
   }
 };
 
-export default countryData;
+export default getRequest;

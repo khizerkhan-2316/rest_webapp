@@ -27,10 +27,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
-  touch-action: none;
-}
-
 .darkmode {
   background-color: var(--dark-mode-background);
 }

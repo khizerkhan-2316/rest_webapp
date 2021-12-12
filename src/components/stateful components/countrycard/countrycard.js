@@ -1,10 +1,15 @@
-import "../../../root.css";
-import "./countrycard.css";
+import '../../../root.css';
+import './countrycard.css';
 
 const CountryCard = (props) => {
   const { flag, name, population, region, capital } = props;
   return (
-    <section className="countrycard">
+    <section
+      className="countrycard"
+      onClick={() => {
+        props.onClick(name);
+      }}
+    >
       <img src={flag} alt="Country" />
 
       <h4>{name}</h4>

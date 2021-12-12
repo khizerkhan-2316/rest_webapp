@@ -1,11 +1,13 @@
 import './App.css';
+import '../root.css';
 import NavigationBar from '../components/stateful components/navigation/navigationbar.js';
 import CountryCard from '../components/stateful components/countrycard/countrycard.js';
 import Searchbar from '../components/stateful components/searchbar/searchbar.js';
 import DropdownList from '../components/stateful components/dropdownList/dropdownList.js';
-import countryData from '../api/data.js';
-import formatNumber from '../root.js';
+import getRequest from '../api/data.js';
+import { formatNumber } from '../root.js';
 import { useEffect, useState } from 'react';
+import { CountryDetails } from '../pages/countrydetails/CountryDetails.js';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -13,6 +15,9 @@ function App() {
   const [searchInput, setInput] = useState('');
   const [isdark, setIsdark] = useState(false);
   const [region, setRegion] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState('');
+
+  console.log(selectedCountry);
   useEffect(() => {
     displayAllCountries();
   }, []);
@@ -21,8 +26,8 @@ function App() {
     const filteredCountries = countries.filter((country) => {
       if (region !== '') {
         return (
-          country.name.toLowerCase().includes(countryName.toLowerCase()) &&
-          country.region.toLowerCase().includes(region.toLowerCase())
+          country.name.toLowerCase() === countryName.toLowerCase() &&
+          country.region.toLowerCase() === region.toLowerCase()
         );
       } else {
         return country.name.toLowerCase().includes(countryName.toLowerCase());
@@ -65,6 +70,7 @@ function App() {
             population={formatNumber(population)}
             region={region}
             capital={capital}
+            onClick={setSelectedCountry}
           />
         );
       });
@@ -72,7 +78,7 @@ function App() {
   };
 
   const displayAllCountries = async () => {
-    const result = await countryData('https://restcountries.com/v2/all');
+    const result = await getRequest('https://restcountries.com/v2/all');
     setCountries(result);
     setFilteredCountries(result);
   };
