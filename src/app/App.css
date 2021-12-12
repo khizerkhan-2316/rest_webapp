@@ -24,9 +24,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: row wrap;
 }
 
-@media screen and (max-width: 466px) {
+@media screen and (max-width: 549px) {
   .countrycard-container {
     justify-content: center;
   }
