@@ -20,7 +20,7 @@ const DropdownList = (props) => {
           <p
             onClick={() => {
               props.onClick('');
-              props.filterCountries(props.countries, '');
+              props.displayByRegion(props.countries, '');
             }}
           >
             {props.region !== '' ? 'Remove filter: ' + props.region : ''}
@@ -53,7 +53,7 @@ const DropdownList = (props) => {
                 nameValue={region}
                 region={props.region}
                 onClick={props.onClick}
-                filterCountries={props.filterCountries}
+                displayByRegion={props.displayByRegion}
                 countries={props.countries}
                 isListActive={isListActive}
                 setIsListActive={setIsListActive}

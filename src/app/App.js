@@ -2,15 +2,13 @@ import './App.css';
 import '../root.css';
 import NavigationBar from '../components/stateful components/navigation/navigationbar.js';
 import CountryCard from '../components/stateful components/countrycard/countrycard.js';
-import Searchbar from '../components/stateful components/searchbar/searchbar.js';
-import DropdownList from '../components/stateful components/dropdownList/dropdownList.js';
 import getRequest from '../api/data.js';
 import { formatNumber } from '../root.js';
 import { useEffect, useState } from 'react';
-import { CountryDetails } from '../pages/countrydetails/CountryDetails.js';
+import CountryDetails from '../pages/countrydetails/CountryDetails.js';
 import QueryMessage from '../components/stateless components/queryMessage/QueryMessage.js';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../pages/Home.js';
 function App() {
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
@@ -90,30 +88,38 @@ function App() {
 
   return (
     <>
-      <NavigationBar isdark={isdark} onClick={setIsdark} />
-      <section className="main-container">
-        <div className="search_and_filter_container">
-          <Searchbar
-            input={searchInput}
-            onChange={setInput}
-            filterCountries={filterCountries}
-            countries={countries}
-            isdark={isdark}
-            onClick={setInput}
+      <Router>
+        <NavigationBar isdark={isdark} onClick={setIsdark} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                input={searchInput}
+                onChange={setInput}
+                filterCountries={filterCountries}
+                displayByRegion={displayByRegion}
+                countries={countries}
+                isdark={isdark}
+                onClick={setRegion}
+                region={region}
+                searchQuery={searchQuery}
+                setInput={setInput}
+              />
+            }
           />
-
-          <DropdownList
-            isdark={isdark}
-            onClick={setRegion}
-            filterCountries={displayByRegion}
-            countries={countries}
-            region={region}
-            input={searchInput}
+          <Route
+            path="/countrydetails"
+            element={
+              <CountryDetails
+                selectedCountry={selectedCountry}
+                setSelectedCountry={setSelectedCountry}
+                countries={countries}
+              />
+            }
           />
-        </div>
-        <section className="searchbar-and-filter-container"></section>
-        <section className="countrycard-container">{searchQuery()}</section>
-      </section>
+        </Routes>
+      </Router>
     </>
   );
 }

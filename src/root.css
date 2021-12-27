@@ -93,3 +93,15 @@ img {
 img:hover {
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}
+
+.lightmode a {
+  color: var(---light-mode-text);
+}
+
+.darkmode a {
+  color: var(---dark-mode-text);
+}

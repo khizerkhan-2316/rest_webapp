@@ -4,7 +4,6 @@ import lightModeIcon from '../../../assets/images/moon.png';
 import darkModeIcon from '../../../assets/images/moon_darkmode.png';
 
 const NavigationBar = (props) => {
-  console.log(props.isDark);
   return (
     <nav>
       <div id="navigation-container">

@@ -4,7 +4,7 @@ const FilterOption = (props) => {
       className="dropdown-div"
       onClick={() => {
         props.onClick(props.nameValue);
-        props.filterCountries(props.countries, props.nameValue);
+        props.displayByRegion(props.countries, props.nameValue);
         props.isListActive
           ? props.setIsListActive(false)
           : props.setIsListActive(true);

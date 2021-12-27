@@ -1,0 +1,69 @@
+.countrycardDetails {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 60px;
+  justify-content: flex-start;
+}
+
+.image-container {
+  width: 30%;
+  height: 50vh;
+}
+
+.countryinfo {
+  width: 70%;
+  height: 50vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.lightmode .image-container img {
+  background-color: var(--light-mode-element);
+  box-shadow: var(--light-mode-boxshadow);
+  cursor: pointer;
+}
+
+.darkmode .image-container img {
+  background-color: var(--dark-mode--element);
+  box-shadow: var(--dark-mode-boxshadow);
+  cursor: pointer;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.main-content h1 {
+  width: 100%;
+  margin-left: 20px;
+  font-size: 30px;
+  text-align: left;
+  margin-top: -27px;
+}
+
+.main-content h6 {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.countryinformation-container h6 span {
+  font-size: 15px;
+}

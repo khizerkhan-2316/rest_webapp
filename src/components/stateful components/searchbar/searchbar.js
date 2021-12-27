@@ -17,7 +17,7 @@ const Searchbar = (props) => {
         }
         alt="Search"
         onClick={() => {
-          props.onClick('');
+          props.setInput('');
           props.filterCountries(props.countries, '');
         }}
       />
