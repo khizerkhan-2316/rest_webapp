@@ -9,6 +9,7 @@ import { formatNumber } from '../root.js';
 import { useEffect, useState } from 'react';
 import { CountryDetails } from '../pages/countrydetails/CountryDetails.js';
 import QueryMessage from '../components/stateless components/queryMessage/QueryMessage.js';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
   const [countries, setCountries] = useState([]);

@@ -1,9 +1,10 @@
-import "./navigationbar.css";
-import "../../../root.css";
-import lightModeIcon from "../../../assets/images/moon.png";
-import darkModeIcon from "../../../assets/images/moon_darkmode.png";
+import './navigationbar.css';
+import '../../../root.css';
+import lightModeIcon from '../../../assets/images/moon.png';
+import darkModeIcon from '../../../assets/images/moon_darkmode.png';
 
 const NavigationBar = (props) => {
+  console.log(props.isDark);
   return (
     <nav>
       <div id="navigation-container">
@@ -14,17 +15,17 @@ const NavigationBar = (props) => {
             alt="Dark mode"
             onClick={() => {
               if (props.isdark) {
-                document.body.classList.remove("darkmode");
-                document.body.classList.add("lightmode");
+                document.body.classList.remove('darkmode');
+                document.body.classList.add('lightmode');
                 props.onClick(false);
               } else {
-                document.body.classList.remove("lightmode");
-                document.body.classList.add("darkmode");
+                document.body.classList.remove('lightmode');
+                document.body.classList.add('darkmode');
                 props.onClick(true);
               }
             }}
           />
-          <h6>{props.isDark ? "Light Mode" : "Dark Mode"}</h6>
+          <h6>{props.isdark ? 'Light Mode' : 'Dark Mode'}</h6>
         </div>
       </div>
     </nav>
