@@ -8,7 +8,7 @@ const CountryCard = (props) => {
     <section
       className="countrycard"
       onClick={() => {
-        props.onClick(name);
+        localStorage.setItem('selectedCountry', name);
       }}
     >
       <Link to="countrydetails">

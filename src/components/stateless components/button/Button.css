@@ -22,5 +22,10 @@ button {
 .darkmode button {
   background-color: var(--dark-mode--element);
   box-shadow: var(--dark-mode-boxshadow);
-  cursor: pointer;
+  color: var(--dark-mode-text);
+}
+
+.darkmode button:hover {
+  box-shadow: var(--dark-mode-boxshadowhover);
+  transition: 0.3s;
 }

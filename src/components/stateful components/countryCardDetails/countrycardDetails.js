@@ -1,18 +1,25 @@
 import '../../../root.css';
 import './countrycardDetails.css';
-const CountrycardDetails = (props) => {
-  const array = props.countries.filter((country) => {
-    return country.name
-      .toLowerCase()
-      .includes(props.selectedCountry.toLowerCase());
-  });
+import { formatNumber } from '../../../root.js';
 
-  console.log(array[0]);
+const CountrycardDetails = () => {
+  const array = JSON.parse(localStorage.getItem('countries')).filter(
+    (country) => {
+      return country.name
+        .toLowerCase()
+        .includes(localStorage.getItem('selectedCountry').toLowerCase());
+    }
+  );
 
-  // destructure country data from array
   const { flag, name, population, region, capital, nativeName, subregion } =
     array[0];
-  //topLevelDomain, currencies.name, languages, borders
+  let topLevelDomain = array[0].topLevelDomain.join(', ');
+  let currencies = array[0].currencies
+    .map((currency) => currency.name)
+    .join(', ');
+  let languages = array[0].languages
+    .map((language) => language.name)
+    .join(', ');
   return (
     <>
       <section className="countrycardDetails">
@@ -27,7 +34,7 @@ const CountrycardDetails = (props) => {
               Native Name: <span>{nativeName}</span>
             </h6>
             <h6>
-              Population: <span>{population}</span>
+              Population: <span>{formatNumber(population)}</span>
             </h6>
             <h6>
               Region: <span>{region}</span>
@@ -43,20 +50,13 @@ const CountrycardDetails = (props) => {
 
           <div className="main-content">
             <h6>
-              Native Name: <span>{nativeName}</span>
+              Top Level Domain: <span>{topLevelDomain}</span>
             </h6>
             <h6>
-              Population: <span>{population}</span>
+              Currencies: <span>{currencies}</span>
             </h6>
             <h6>
-              Region: <span>{region}</span>
-            </h6>
-
-            <h6>
-              Sub Region: <span>{subregion}</span>
-            </h6>
-            <h6>
-              Capital: <span>{capital}</span>
+              Languages: <span>{languages}</span>
             </h6>
           </div>
         </section>

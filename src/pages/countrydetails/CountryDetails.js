@@ -9,12 +9,7 @@ const CountryDetails = (props) => {
         <section className="navigate-to-homepage-button-container">
           <Button target="/" />
         </section>
-        <CountrycardDetails
-          selectedCountry={props.selectedCountry}
-          setSelectedCountry={props.setSelectedCountry}
-          countries={props.countries}
-          filterCountries={props.filterCountries}
-        />
+        <CountrycardDetails />
       </section>
     </>
   );

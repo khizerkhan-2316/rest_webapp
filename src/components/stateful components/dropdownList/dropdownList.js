@@ -47,7 +47,7 @@ const DropdownList = (props) => {
           }
           id="myDropdown"
         >
-          {regions.map((region) => {
+          {regions.map((region, index) => {
             return (
               <FilterOption
                 nameValue={region}
@@ -57,6 +57,7 @@ const DropdownList = (props) => {
                 countries={props.countries}
                 isListActive={isListActive}
                 setIsListActive={setIsListActive}
+                key={index}
               />
             );
           })}

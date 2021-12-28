@@ -15,7 +15,6 @@ function App() {
   const [searchInput, setInput] = useState('');
   const [isdark, setIsdark] = useState(false);
   const [region, setRegion] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState('');
 
   useEffect(() => {
     displayAllCountries();
@@ -71,7 +70,6 @@ function App() {
             population={formatNumber(population)}
             region={region}
             capital={capital}
-            onClick={setSelectedCountry}
           />
         );
       });
@@ -84,6 +82,8 @@ function App() {
     setCountries(result);
 
     setFilteredCountries(result);
+
+    localStorage.setItem('countries', JSON.stringify(result));
   };
 
   return (
@@ -108,16 +108,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/countrydetails"
-            element={
-              <CountryDetails
-                selectedCountry={selectedCountry}
-                setSelectedCountry={setSelectedCountry}
-                countries={countries}
-              />
-            }
-          />
+          <Route path="/countrydetails" element={<CountryDetails />} />
         </Routes>
       </Router>
     </>
