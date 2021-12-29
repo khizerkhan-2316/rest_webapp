@@ -3,8 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 const dotenv = require('dotenv');
 dotenv.config();
-
-mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY;
 const Map = (props) => {
   const mapContainer = useRef(null);
   const map = useRef(null);

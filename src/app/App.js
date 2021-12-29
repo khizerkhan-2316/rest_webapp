@@ -16,6 +16,8 @@ function App() {
   const [isdark, setIsdark] = useState(false);
   const [region, setRegion] = useState('');
 
+  console.log(process.env.REACT_APP_MAPBOX_API_KEY);
+
   useEffect(() => {
     displayAllCountries();
   }, []);
