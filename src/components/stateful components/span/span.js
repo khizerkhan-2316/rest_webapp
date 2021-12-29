@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 const Span = (props) => {
   return (
     <Link
-      to={'#'}
+      to={'/countrydetails'}
       onClick={() => {
         localStorage.setItem('selectedCountry', props.name);
-        window.location.reload();
+
         localStorage.setItem('latitude', props.latlng[0]);
         localStorage.setItem('longitude', props.latlng[1]);
+        window.location.reload();
       }}
+      className="link"
     >
       <div className="span">
         <div className="span__text">

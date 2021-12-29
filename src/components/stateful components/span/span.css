@@ -6,7 +6,6 @@
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 20px;
 }
 
 .lightmode .span {
@@ -27,4 +26,32 @@
 .darkmode .span:hover {
   box-shadow: var(--dark-mode-boxshadowhover);
   transition: 0.3s;
+}
+
+.link {
+  margin-left: 3px;
+}
+
+@media screen and (max-width: 1600px) {
+  .span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1459px) {
+  .span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1059px) {
+  .span {
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .span {
+    padding: 10px 15px 10px 15px;
+  }
 }
