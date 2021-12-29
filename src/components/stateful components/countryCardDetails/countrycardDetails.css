@@ -9,12 +9,12 @@
 
 .image-container {
   width: 30%;
-  height: 50vh;
+  height: auto;
 }
 
 .countryinfo {
   width: 70%;
-  height: 50vh;
+  height: auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -133,7 +133,7 @@
 
   .countryinfo {
     width: 100%;
-    overflow: hidden;
+    margin-top: 20px;
   }
 }
 
