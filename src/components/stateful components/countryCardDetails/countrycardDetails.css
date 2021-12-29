@@ -16,9 +16,9 @@
   width: 70%;
   height: 50vh;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .image-container img {
@@ -41,15 +41,15 @@
 }
 
 .main-content {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 20px;
 }
 
 .main-content h1 {
-  width: 100%;
+  width: 51%;
   margin-left: 20px;
   font-size: 30px;
   text-align: left;
@@ -57,7 +57,7 @@
 }
 
 .main-content h6 {
-  width: 100%;
+  width: 51%;
   margin-top: 10px;
   margin-left: 20px;
   font-size: 18px;
@@ -66,4 +66,17 @@
 
 .countryinformation-container h6 span {
   font-size: 15px;
+}
+
+.border-countries {
+  width: 71%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.border-countries h6 {
+  font-size: 18px;
+  width: 100%;
 }

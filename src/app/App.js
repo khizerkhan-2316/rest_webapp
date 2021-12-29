@@ -70,6 +70,7 @@ function App() {
             population={formatNumber(population)}
             region={region}
             capital={capital}
+            latlng={country.latlng}
           />
         );
       });

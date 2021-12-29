@@ -9,6 +9,8 @@ const CountryCard = (props) => {
       className="countrycard"
       onClick={() => {
         localStorage.setItem('selectedCountry', name);
+        localStorage.setItem('latitude', props.latlng[0]);
+        localStorage.setItem('longitude', props.latlng[1]);
       }}
     >
       <Link to="countrydetails">

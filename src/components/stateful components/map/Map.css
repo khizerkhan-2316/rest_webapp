@@ -1,0 +1,16 @@
+.map-container {
+  width: 90%;
+  height: 20%;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.lightmode .map-container {
+  background-color: var(--light-mode-element);
+  box-shadow: var(--light-mode-boxshadow);
+}
+
+.lightmode .map-container:hover {
+  background-color: var(--light-mode-element-hover);
+  box-shadow: var(--light-mode-boxshadow-hover);
+}

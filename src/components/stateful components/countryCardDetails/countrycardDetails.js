@@ -1,8 +1,9 @@
 import '../../../root.css';
 import './countrycardDetails.css';
 import { formatNumber } from '../../../root.js';
+import Span from '../span/span.js';
 
-const CountrycardDetails = () => {
+const CountrycardDetails = (props) => {
   const array = JSON.parse(localStorage.getItem('countries')).filter(
     (country) => {
       return country.name
@@ -20,6 +21,28 @@ const CountrycardDetails = () => {
   let languages = array[0].languages
     .map((language) => language.name)
     .join(', ');
+
+  const borders = () => {
+    if (array[0].borders !== undefined) {
+      const countries = [];
+      const latlng = [];
+      JSON.parse(localStorage.getItem('countries')).forEach((country) => {
+        for (let i = 0; i < array[0].borders.length; i++) {
+          if (array[0].borders[i] === country.alpha3Code) {
+            countries.push(country.name);
+            latlng.push(country.latlng);
+          }
+        }
+      });
+
+      return countries.map((border, index) => {
+        return <Span key={index} name={border} latlng={latlng[index]} />;
+      });
+    } else {
+      return null;
+    }
+  };
+
   return (
     <>
       <section className="countrycardDetails">
@@ -47,7 +70,6 @@ const CountrycardDetails = () => {
               Capital: <span>{capital}</span>
             </h6>
           </div>
-
           <div className="main-content">
             <h6>
               Top Level Domain: <span>{topLevelDomain}</span>
@@ -58,6 +80,14 @@ const CountrycardDetails = () => {
             <h6>
               Languages: <span>{languages}</span>
             </h6>
+          </div>
+          <div className="border-countries">
+            <h6>
+              {borders() === null
+                ? 'Border Contries: None'
+                : 'Border Countries:'}
+            </h6>
+            {borders() === null ? '' : borders()}
           </div>
         </section>
       </section>

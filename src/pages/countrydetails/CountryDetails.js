@@ -2,6 +2,7 @@ import '../../root.css';
 import './CountryDetails.css';
 import Button from '../../components/stateless components/button/Button.js';
 import CountrycardDetails from '../../components/stateful components/countryCardDetails/countrycardDetails.js';
+import Map from '../../components/stateful components/map/Map.js';
 const CountryDetails = (props) => {
   return (
     <>
@@ -10,6 +11,7 @@ const CountryDetails = (props) => {
           <Button target="/" />
         </section>
         <CountrycardDetails />
+        <Map />
       </section>
     </>
   );
