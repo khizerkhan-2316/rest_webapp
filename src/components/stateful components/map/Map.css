@@ -18,12 +18,19 @@
 
 @media screen and (max-width: 1549px) {
   .map-container {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 
 @media screen and (min-width: 1550px) {
   .map-container {
-    margin-top: 50px;
+    margin-top: 75px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
