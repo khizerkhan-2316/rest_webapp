@@ -9,7 +9,7 @@
 
 .image-container {
   width: 30%;
-  height: auto;
+  height: 45vh;
 }
 
 .countryinfo {
@@ -113,6 +113,12 @@
   }
 }
 
+@media screen and (min-width: 1060px) {
+  .image-container {
+    height: 50vh;
+  }
+}
+
 @media screen and (max-width: 1059px) {
   .image-container {
     width: 50%;
@@ -135,18 +141,23 @@
     width: 100%;
     margin-top: 20px;
   }
+
+  .main-content h6,
+  .main-content h1,
+  .border-countries h6 {
+    margin-left: 0px;
+  }
+
+  .border-countries {
+    padding: 0;
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .main-content {
     width: 100%;
     margin-top: 10px;
-  }
-
-  .main-content h6,
-  .main-content h1,
-  .border-countries h6 {
-    margin-left: 0px;
   }
 
   .main-content h1 {
@@ -156,11 +167,6 @@
 
   .main-content h6 {
     font-size: 13px;
-  }
-
-  .border-countries {
-    padding: 0;
-    margin-top: 30px;
   }
 
   .border-countries h6 {

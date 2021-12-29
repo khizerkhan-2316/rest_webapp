@@ -2,9 +2,8 @@
   width: 90%;
   height: 20vh;
   border-radius: 5px;
-
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .lightmode .map-container {
@@ -17,28 +16,14 @@
   box-shadow: var(--light-mode-boxshadow-hover);
 }
 
-@media screen and (max-width: 1345px) {
-  .main-content h1 {
-    font-size: 25px;
-  }
-
-  .main-content h6 {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width: 1060px) {
+@media screen and (max-width: 1549px) {
   .map-container {
-    margin-top: 100px;
+    margin-top: 30px;
   }
 }
 
-@media screen and (max-width: 1059px) {
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1550px) {
   .map-container {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 50px;
   }
 }
