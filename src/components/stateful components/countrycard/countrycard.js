@@ -11,6 +11,7 @@ const CountryCard = (props) => {
         localStorage.setItem('selectedCountry', name);
         localStorage.setItem('latitude', props.latlng[0]);
         localStorage.setItem('longitude', props.latlng[1]);
+        window.scrollTo(0, 0);
       }}
     >
       <Link to="countrydetails">
