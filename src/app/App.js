@@ -16,11 +16,22 @@ function App() {
   const [isdark, setIsdark] = useState(false);
   const [region, setRegion] = useState('');
 
-  console.log(process.env.REACT_APP_MAPBOX_API_KEY);
-
   useEffect(() => {
     displayAllCountries();
+    checkTheme();
   }, []);
+
+  const checkTheme = () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.remove('lightmode');
+      document.body.classList.add('darkmode');
+      setIsdark(true);
+    } else if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.remove('darkmode');
+      document.body.classList.add('lightmode');
+      setIsdark(false);
+    }
+  };
 
   const filterCountries = (countries, countryName) => {
     const filteredCountries = countries.filter((country) => {

@@ -67,13 +67,15 @@
 .border-countries {
   width: 71%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-flow: row wrap;
+  margin-left: -2%;
 }
 
 .border-countries h6 {
   font-size: 18px;
   width: 100%;
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 1345px) {
@@ -127,7 +129,6 @@
 
   .countryinfo {
     width: 49%;
-    overflow: hidden;
   }
 }
 
@@ -143,8 +144,7 @@
   }
 
   .main-content h6,
-  .main-content h1,
-  .border-countries h6 {
+  .main-content h1 {
     margin-left: 0px;
   }
 

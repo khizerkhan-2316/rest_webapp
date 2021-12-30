@@ -4,6 +4,25 @@ import lightModeIcon from '../../../assets/images/moon.png';
 import darkModeIcon from '../../../assets/images/moon_darkmode.png';
 
 const NavigationBar = (props) => {
+  const handleEvents = (remove, add, setItem, boolean) => {
+    document.body.classList.remove(remove);
+    document.body.classList.add(add);
+    localStorage.setItem('theme', setItem);
+    props.onClick(boolean);
+  };
+
+  const checkTheme = (props) => {
+    if (localStorage.getItem('theme') === 'dark') {
+      handleEvents('darkmode', 'lightmode', 'light', false);
+    } else if (localStorage.getItem('theme') === 'light') {
+      handleEvents('lightmode', 'darkmode', 'dark', true);
+    }
+
+    if (localStorage.getItem('theme') === null) {
+      handleEvents('lightmode', 'darkmode', 'dark', true);
+    }
+  };
+
   return (
     <nav>
       <div id="navigation-container">
@@ -13,17 +32,10 @@ const NavigationBar = (props) => {
             src={props.isdark ? darkModeIcon : lightModeIcon}
             alt="Dark mode"
             onClick={() => {
-              if (props.isdark) {
-                document.body.classList.remove('darkmode');
-                document.body.classList.add('lightmode');
-                props.onClick(false);
-              } else {
-                document.body.classList.remove('lightmode');
-                document.body.classList.add('darkmode');
-                props.onClick(true);
-              }
+              checkTheme(props);
             }}
           />
+
           <h6>{props.isdark ? 'Light Mode' : 'Dark Mode'}</h6>
         </div>
       </div>
