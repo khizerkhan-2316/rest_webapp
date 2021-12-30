@@ -6,9 +6,10 @@ import Span from '../span/span.js';
 const CountrycardDetails = (props) => {
   const array = JSON.parse(localStorage.getItem('countries')).filter(
     (country) => {
-      return country.name
-        .toLowerCase()
-        .includes(localStorage.getItem('selectedCountry').toLowerCase());
+      return (
+        country.name.toLowerCase() ===
+        localStorage.getItem('selectedCountry').toLowerCase()
+      );
     }
   );
 
