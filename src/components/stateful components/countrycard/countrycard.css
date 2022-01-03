@@ -1,6 +1,6 @@
 .countrycard {
   width: 200px;
-  height: 320px;
+  height: auto;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -8,6 +8,7 @@
   border-radius: 5px;
   margin: 20px 0px 20px 0px;
   cursor: pointer;
+  padding-bottom: 30px;
 }
 
 .countrycard h3 {

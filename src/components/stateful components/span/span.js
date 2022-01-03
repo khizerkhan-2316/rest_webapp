@@ -11,6 +11,7 @@ const Span = (props) => {
         localStorage.setItem('latitude', props.latlng[0]);
         localStorage.setItem('longitude', props.latlng[1]);
         window.location.reload();
+        window.scrollTo(0, 0);
       }}
       className="link"
     >
